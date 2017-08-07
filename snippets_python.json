@@ -1,0 +1,216 @@
+{
+    "self init": {
+        "prefix": "ss",
+        "body": [
+            "self.$1 = $1\r",
+            "$0"
+        ],
+        "description": "self init"
+    },
+    "New function": {
+        "prefix": "def",
+        "body": "def ${1:fname}(${2:arg}):\n\t${3:pass}$0"
+    },
+    "magic": {
+        "prefix": "magic",
+        "body": "__$1__$0"
+    },
+    "def magic": {
+        "prefix": "mmagic",
+        "body": "def __${1:mname}__(self$2):\n\t${3:pass}$0"
+    },
+    "self": {
+        "prefix": "s",
+        "body": "self.$0"
+    },
+    "method": {
+        "prefix": "method",
+        "body": "def ${1:mname}(self$2):\n\t${3:pass}$0"
+    },
+    "New class": {
+        "prefix": "class",
+        "body": "class ${1:ClassName}(${2:object}):\n\tdef __init__(self$3):\n\t\t${6:pass}$0"
+    },
+    "super": {
+        "prefix": "super",
+        "body": "super().__init__($1):$0"
+    },
+    "inline if": {
+        "prefix": "iif",
+        "body": "${1:value} if ${2:condition} else ${3:value}$0"
+    },
+    "if": {
+        "prefix": "if",
+        "body": "if ${1:condition}:\n\t${2:pass}$0"
+    },
+    "for": {
+        "prefix": "for",
+        "body": "for ${1:i} in ${2:iterable}:\n\t${3:pass}$0"
+    },
+    "while": {
+        "prefix": "while",
+        "body": "while ${1:condition}:\n\t${2:pass}$0"
+    },
+    "try:except:": {
+        "prefix": "try",
+        "body": "try:\n\t${1:pass}\nexcept ${2:Exception} as ${3:e}:\n\t${4:raise $3}$0"
+    },
+    "try:except:else:finally": {
+        "prefix": "tryef",
+        "body": "try:\n\t${1:pass}\nexcept${2: ${3:Exception} as ${4:e}}:\n\t${5:raise}\nelse:\n\t${6:pass}\nfinally:\n\t${7:pass}$0"
+    },
+    "try:except:else": {
+        "prefix": "trye",
+        "body": "try:\n\t${1:pass}\nexcept ${2:Exception} as ${3:e}:\n\t${4:raise $3}\nelse:\n\t${5:pass}$0"
+    },
+    "try:except:finally": {
+        "prefix": "tryf",
+        "body": "try:\n\t${1:pass}\nexcept ${2:Exception} as ${3:e}:\n\t${4:raise $3}\nfinally:\n\t${5:pass}$0"
+    },
+    "List comprehension": {
+        "prefix": "lc",
+        "body": "[${1:value} for ${2:i} in ${3:iterable}]$0"
+    },
+    "List comprehension if else": {
+        "prefix": "lcie",
+        "body": "[${1:value} if ${2:condition} else ${3:condition} for ${4:i} in ${5:iterable}]$0"
+    },
+    "List comprehension if filter": {
+        "prefix": "lci",
+        "body": "[${1:value} for ${2:i} in ${3:iterable} if ${4:condition}$0]"
+    },
+    "Dictionary comprehension": {
+        "prefix": "dc",
+        "body": "{${1:key}: ${2:value} for ${3:key}, ${4:value} in ${5:iterable}}$0"
+    },
+    "Dictionary comprehension if filter": {
+        "prefix": "dci",
+        "body": "{${1:key}: ${2:value} for ${3:key}, ${4:value} in ${5:iterable} if ${6:condition}}$0"
+    },
+    "Set comprehension": {
+        "prefix": "sc",
+        "body": "{${1:value} for ${2:i} in ${3:iterable}}$0"
+    },
+    "Set Comprehension if filter": {
+        "prefix": "sci",
+        "body": "{${1:value} for ${2:i} in ${3:iterable} if ${4:condition}}$0"
+    },
+    "Gerator comprehension": {
+        "prefix": "gc",
+        "body": "(${1:key} for ${2:i} in ${3:iterable})$0"
+    },
+    "Gerator comprehension if filter": {
+        "prefix": "gci",
+        "body": "(${1:key} for ${2:i} in ${3:iterable} if ${4:condition})$0"
+    },
+    "for enum": {
+        "prefix": "foren",
+        "body": "for ${1:i}, ${2:j} in enumerate(${3:iterable}):\n\t${4:pass}$0"
+    },
+    "lambda": {
+        "prefix": "lambda",
+        "body": "lambda ${1:x}: ${2:expression}$0",
+        "description": "a = lambda i: i**2\nmin = lambda x, y: x if x < y else y"
+    },
+    "format": {
+        "prefix": "format()",
+        "body": "'$1'.format(${2:args})$0",
+        "description": "def format(*args, **kwargs)"
+    },
+    "range": {
+        "prefix": "range(start, stop, step)",
+        "body": "range(${1:start, stop=None, step=1})$0",
+        "description": "range(start, stop=None, step=1)"
+    },
+    "sorted": {
+        "prefix": "sorted(iterable, key, reverse)",
+        "body": "sorted(${1:iterable}${2:, key=None}${3:, reverse=False})$0",
+        "description": "def sorted(iterable, cmp=None, key=None, reverse=False)\n\nKEY means the key of the dict !"
+    },
+    "enumerate": {
+        "prefix": "enumerate(iterable)",
+        "body": "enumerate(${1:iterable, start=None})$0",
+        "description": "enumerate(iterable, start=None)"
+    },
+    "map": {
+        "prefix": "map(fct, seq)",
+        "body": "map(${1:func}, ${2:seq})$0",
+        "description": "map(function, sequence, sequence=None, ...=None)->iterator that applies function to every item of iterable yelding the result\n---\n\nprint(list(map((lambda x: x+2),[2,3]))\n>>>[4,5]\n---\nfor i in map(lambda x: x**2, [2,3,4]):\n\tprint(i, end=', ')\n>>>4, 9, 16\n---\n2**10 = 1024 \n3**11 = 177147 \n4**12 = 1677216\n\nfor i in map(pow, [2,3,4],[10,11,12]):\n\tprint(i, end=', ')\n>>>1024, 177147, 16777216\n---\nfcs = [lambda x: x**2, lambda x: x**3]\n\nfor r in range(4):\n\tv = list(map(lambda x: x(r), fcs))\n\tprint(v)\n\n>>>[0,0]\n>>>[1,1]\n>>>[4,8]\n>>>[9,27]"
+    },
+    "filter": {
+        "prefix": "filter(fct or None, seq)",
+        "body": "filter(${1:func or None}, ${2:seq})$0",
+        "description": "->lst, tuple or string.\n\nExtracts each elements in the sequence for which the function return True.\n\nprint(list(range(-5,5)))\n>>>[-5, -4, -3, -2, -1, 0, 1, 2, 3, 4]\nprint(list(filter((lambda x: x<0), range(-5,5))))\n>>>[-5, -4, -3, -2, -1]"
+    },
+    "find": {
+        "prefix": "find(sub, start=None, end=None",
+        "body": "find(${1:sub, start=None, end=None})$0",
+        "description": "S.find(sub [,start [,end]]) -> int\n\nReturn the lowest index in S where substring sub is found, such that sub is contained within S[start:end]. Optional arguments start and end are interpreted as in slice notation. Return-1 on failure."
+    },
+    "join": {
+        "prefix": "join(iterable)",
+        "body": "'$1'.join(${2:iterable})$0",
+        "description": "S.join(iterable) -> string Return a string which is the concatenation of the strings in the iterable. The separator between elements is S."
+    },
+    "alphabet": {
+        "prefix": "alphabet",
+        "body": "''.join(chr(i) for i in range(ord('A'), ord('Z') + 1))%0",
+        "description": "ord() et chr()"
+    },
+    "print": {
+        "prefix": "print()",
+        "body": "print(${2:'$1'})"
+    },
+    "end": {
+        "prefix": "end='",
+        "body": "end='$1'"
+    },
+    "@property": {
+        "prefix": "@property",
+        "body": "@property$0"
+    },
+    "@staticmethod": {
+        "prefix": "@staticmethod",
+        "body": "{1:PAS SELF/CLS}@staticmethod$0"
+    },
+    "@classmethod": {
+        "prefix": "@classmethod",
+        "body": "${1:PAS OUBLIER CLS}@classmethod$0"
+    },
+    "@func.setter": {
+        "prefix": "@setter",
+        "body": "@${1:fname}.setter\ndef ${1:fname}(self, ${2:value}):\n\tself.${3:attribute} = ${2:value}$0"
+    },
+    "@func.deleter": {
+        "prefix": "@deleter",
+        "body": "@${1:fname}.deleter$0"
+    },
+    "dict sort: key alpha": {
+        "prefix": "dict sort key alpha",
+        "body": "for ${1:i} in sorted(list(${2:dict name}.keys())):\n\t print('{}:\\t{}\\t{}'.format(${4:${1:i}, ${2:dict name}[${1:i}][0], ${2:dict name}[${1:i}][1]}))$0"
+    },
+    "dict sort: value(1) (decroissant)": {
+        "prefix": "dict sort value(1) dec (rev)",
+        "body": "for ${1:i} in sorted(${2:dict name}, key=lambda c: ${2:dict name}[${3:x}][0], reverse=True):\n\tprint('{}:\\t{}\\t{}'.format(${4:${1:i}, ${2:SORTED VALUE}[${1:i}][0], ${2:dict name}[${1:i}][1]}))$0"
+    },
+    "dict sort: value(3) (decroissant)": {
+        "prefix": "dict sort value(3) dec (-)",
+        "body": "for ${1:i} in sorted(${2:dict name}, key= lambda ${3:x}: (- ${2:cr1}[${3:x}][0], - ${2:cr2}[${3:x}][1], - ${2:cr3}[${3:x}][2])):\n\tprint('key:{}\\t criteria1:{}\\t criteria2:{}\\t criteria3:{}'\n\t\t.format(${1:i}, ${2:cr1}[${1:i}][0], ${2:cr2}[${1:i}][1], ${2:cr3}[${1:i}][2]))"
+    },
+    "dict sort: value(3) (croiss)": {
+        "prefix": "dict sort value(3) croissant ()",
+        "body": "for ${1:i} in sorted(${2:dict name}, key= lambda ${3:x}: (${2:cr1}[${3:x}][0], ${2:cr2}[${3:x}][1], ${2:cr3}[${3:x}][2])):\n\tprint('key:{}\\t criteria1:{}\\t criteria2:{}\\t criteria3:{}'\n\t\t.format(${1:i}, ${2:cr1}[${1:i}][0], ${2:cr2}[${1:i}][1], ${2:cr3}[${1:i}][2]))"
+    },
+    "inspect (import inspect)": {
+        "prefix": "inspect",
+        "body": "print(inspect.stack()[${1:niveau}][${2:fonction}])"
+    },
+    "introspect (current class name)": {
+        "prefix": "introspect",
+        "body": "self.__class__.__name__"
+    },
+    "inspect tuto": {
+        "prefix": "inspect",
+        "body": "$0${1:#[0][0] => path du fichier\n#[x][1] => adresse en memoire objet \n#[x][2] => num ligne du call \n#[x][3] => nom fonction \n#[x][4] => str contenan le texte de la ligne\n# self.__class__.__name__ => classe courante}"
+    }
+}
