@@ -1,0 +1,244 @@
+{
+    // "terminal.integrated.fontFamily": "operator mono book",
+    "terminal.integrated.fontFamily": "pragmataPro",
+    "terminal.integrated.fontSize": 18,
+    "terminal.integrated.lineHeight": 1.25,
+    // "editor.fontFamily": "operator mono book",
+    "editor.fontFamily": "pragmataPro",
+    "editor.fontSize": 24,
+    "editor.lineHeight": 0,
+    "editor.wordWrap": "off",
+    "workbench.colorTheme": "dimmed-monokai",
+    "editor.fontWeight": "normal",
+    "editor.fontLigatures": true,
+    "window.zoomLevel": 0,
+    "terminal.integrated.fontLigatures": false,
+    "editor.renderWhitespace": "none",
+    "editor.mouseWheelScrollSensitivity": 0.8,
+    "editor.formatOnType": false,
+    "editor.formatOnPaste": true,
+    "editor.snippetSuggestions": "top",
+    "editor.renderLineHighlight": "gutter",
+    "editor.matchBrackets": false,
+    "editor.acceptSuggestionOnEnter": "off",
+    "workbench.activityBar.visible": true,
+    "workbench.statusBar.visible": true,
+    "code-runner.executorMap": {
+        "javascript": "node",
+        "java": "cd $dir && javac $fileName && java $fileNameWithoutExt",
+        "c": "cd $dir && gcc $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
+        // "cpp": "cd $dir && g++ $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
+        "cpp": "cd $dir && c++ *.c* -o $fileNameWithoutExt -w -g -lm -Wall -std=c++14 && $dir$fileNameWithoutExt",
+        // "cpp": "g++ $fullFileName && ./a.out",
+        "objective-c": "cd $dir && gcc -framework Cocoa $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
+        "php": "php",
+        "python": "python",
+        "perl": "perl",
+        "ruby": "ruby",
+        "go": "go run",
+        "lua": "lua",
+        "groovy": "groovy",
+        "powershell": "powershell -ExecutionPolicy ByPass -File",
+        "bat": "cmd /c",
+        "shellscript": "bash",
+        "fsharp": "fsi",
+        "csharp": "scriptcs",
+        "vbscript": "cscript //Nologo",
+        "typescript": "ts-node",
+        "coffeescript": "coffee",
+        "scala": "scala",
+        "swift": "swift",
+        "julia": "julia",
+        "crystal": "crystal",
+        "ocaml": "ocaml",
+        "r": "Rscript",
+        "applescript": "osascript",
+        "clojure": "lein exec",
+        "haxe": "haxe --cwd $dirWithoutTrailingSlash --run $fileNameWithoutExt",
+        "rust": "cd $dir && rustc $fileName && $dir$fileNameWithoutExt",
+        "racket": "racket",
+        "ahk": "autohotkey",
+        "autoit": "autoit3"
+    },
+    "align.rightSeparators": [
+        "=",
+        "+=",
+        "-=",
+        "*=",
+        "/=",
+        "?=",
+        "|=",
+        "%=",
+        ".=",
+        "=>",
+        "//"
+    ],
+    "editor.suggestOnTriggerCharacters": true,
+    "editor.tabCompletion": true,
+    "editor.wordBasedSuggestions": false,
+    "workbench.sideBar.location": "right",
+    "editor.selectionHighlight": false,
+    "editor.lineNumbers": "on",
+    "typescript.referencesCodeLens.enabled": false,
+    "typescript.implementationsCodeLens.enabled": false,
+    "debug.inlineValues": true,
+    "sync.gist": "23f1e9a909e77fa8876b5cf65abc2187",
+    "sync.lastUpload": "",
+    "sync.autoDownload": false,
+    "sync.autoUpload": false,
+    "sync.lastDownload": "2017-07-05T09:25:33.399Z",
+    "sync.forceDownload": false,
+    "sync.anonymousGist": false,
+    "sync.host": "",
+    "sync.pathPrefix": "",
+    "code-runner.clearPreviousOutput": true,
+    "terminal.integrated.rightClickCopyPaste": true,
+    "editor.codeLens": true,
+    "editor.tabSize": 4,
+    "files.associations": {
+        "*.tpp": "cpp"
+    },
+    "terminal.integrated.cursorBlinking": true,
+    "terminal.integrated.cursorStyle": "line",
+    // GIT
+    "vsicons.dontShowNewVersionMessage": true,
+    "workbench.iconTheme": "material-icon-theme",
+    "git.confirmSync": false,
+    "git.autofetch": false,
+    "markdown.previewFrontMatter": "hide",
+    "markdown.preview.fontSize": 20,
+    "markdown.preview.scrollPreviewWithEditorSelection": false,
+    "markdown.enableExperimentalExtensionApi": true,
+    "markdown.preview.scrollEditorWithPreview": false,
+    "sync.quietSync": false,
+    "editor.renderIndentGuides": false,
+    "editor.minimap.enabled": false,
+    "editor.multiCursorModifier": "ctrlCmd",
+    "window.openFilesInNewWindow": "off",
+    "window.openFoldersInNewWindow": "off",
+    "emmet.useNewEmmet": true,
+    "extensions.autoUpdate": false,
+    "[markdown]": {
+        "editor.quickSuggestions": true
+    },
+    "explorer.autoReveal": true,
+    "sync.askGistName": false,
+    "code-runner.runInTerminal": true,
+    "editor.quickSuggestions": {
+        "other": true,
+        "comments": false,
+        "strings": false
+    },
+    // cpp
+    "C_Cpp.intelliSenseEngine": "Default",
+    "C_Cpp.intelliSenseEngineFallback": "Disabled",
+    "C_Cpp.autocomplete": "Default",
+    "C_Cpp.errorSquiggles": "Enabled",
+    "editor.minimap.showSlider": "always",
+    "editor.minimap.renderCharacters": false,
+    "editor.minimap.maxColumn": 60,
+    "editor.parameterHints": true,
+    "editor.autoIndent": true,
+    "editor.suggestFontSize": 19,
+    "editor.suggestLineHeight": 21,
+    "editor.overviewRulerLanes": 1,
+    "editor.overviewRulerBorder": false,
+    "editor.glyphMargin": false,
+    "editor.links": true,
+    "window.enableMenuBarMnemonics": false,
+    "window.menuBarVisibility": "toggle",
+    "workbench.startupEditor": "none",
+    "javascript.referencesCodeLens.enabled": true,
+    "[python]": {},
+    "bracketPairColorizer.forceUniqueOpeningColor": false,
+    "bracketPairColorizer.timeOut": 1,
+    "bracketPairColorizer.colorMode": "Consecutive",
+    "bracketPairColorizer.consecutivePairColors": [
+        "()",
+        "[]",
+        "{}",
+        [
+            "#A1CAF1",
+            "#EF7800",
+            "#db2d20"
+            // "#00efef",
+        ],
+        "Red"
+    ],
+    // "bracketPairColorizer.colorMode": "Independent",
+    "bracketPairColorizer.independentPairColors": [
+        [
+            "()",
+            [
+                "white"
+                // "#00C176"
+                // "Gold"
+                // "LightSkyBlue"
+                // "Orchid"
+            ],
+            "Red"
+        ],
+        [
+            "[]",
+            [
+                // "#FD971F"
+                // "Gold",
+                "LightSkyBlue"
+            ],
+            "Red"
+        ],
+        [
+            "{}",
+            [
+                "#FD971F"
+                // "Orchid",
+                // "LightSkyBlue"
+            ],
+            "Red"
+        ]
+    ],
+    // python
+    // "python.pythonPath": "/usr/bin/python3",
+    "python.autoComplete.preloadModules": [
+        "tkinter",
+        "numpy",
+        "matplotlib",
+        "matplotlib.pyplot",
+        "pylab",
+        "re",
+        "pysnmp"
+    ],
+    "python.autoComplete.addBrackets": false,
+    "python.linting.enabled": false,
+    "python.linting.lintOnSave": false,
+    "python.linting.lintOnTextChange": false,
+    "python.linting.pylintEnabled": false,
+    "python.linting.flake8Enabled": false,
+    "python.formatting.provider": "yapf",
+    "python.unitTest.unittestEnabled": false,
+    "python.unitTest.pyTestEnabled": false,
+    "python.unitTest.nosetestsEnabled": false,
+    "editor.quickSuggestionsDelay": 1,
+    "python.formatting.formatOnSave": false,
+    "jsDocCompletion.enabled": false,
+    "python.linting.pylintArgs": [
+        "--errors-only"
+    ],
+    "material-icon-theme.angular.iconsEnabled": true,
+    "materialTheme.cache.workbench.settings": {
+        "themeColours": "Light",
+        "accent": "Indigo"
+    },
+    "workbench.colorCustomizations": {
+        "activityBarBadge.background": "#5C6BC0",
+        "list.activeSelectionForeground": "#5C6BC0",
+        "list.inactiveSelectionForeground": "#5C6BC0",
+        "list.highlightForeground": "#5C6BC0",
+        "scrollbarSlider.activeBackground": "#5C6BC050",
+        "editorSuggestWidget.highlightForeground": "#5C6BC0",
+        "textLink.foreground": "#5C6BC0",
+        "progressBar.background": "#5C6BC0",
+        "pickerGroup.foreground": "#5C6BC0"
+    },
+    "material-icon-theme.folders.icons": "blue"
+}
